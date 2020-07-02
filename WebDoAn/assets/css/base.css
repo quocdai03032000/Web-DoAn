@@ -1,0 +1,110 @@
+:root{
+    --primary-color:#EE4D2D;
+    --white-color:#fff;
+    --black-color:#000;
+    --text-color:#333;
+    --star-gold-color:yellow;
+    --background-color-hover:#cecccc;
+    --header-height:120px;
+    --navbar-height:34px;
+    --header-with-search-height: calc(var(--header-height) - var(--navbar-height)); 
+}
+
+*{
+    box-sizing: inherit;/*kế thừa tất cả các biến có box-sizing*/
+}
+
+html{
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+/*Responsive*/
+.grid{
+    width:1350px;
+    max-width: 100%;/*nhỏ hơn 1350 thì sẽ giảm đi kích thước để bằng với màn hình*/ 
+    margin: 0 auto;
+}
+
+.grid__full-width{
+    width: 100%;
+}
+
+.grid__row{
+    display: flex; /*cho tất cả trên hàng ngang*/
+    flex-wrap:wrap ;/*khi hết trang xuống dòng*/
+    margin-left: -5px;
+    margin-right: -5px;
+}
+/* /test */
+.grid__column-2column{
+padding-left: 5px;
+padding-right: 5px;
+width: 16.667%;
+}
+.grid__column-2-4column{
+    padding-left: 5px;
+padding-right: 5px;
+width: 20%;
+}
+.grid__column-10column{
+padding-left: 5px;
+padding-right: 5px;
+width: 83.3334%;
+}
+/* phân trang */
+.home-pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+.home-pagination-item{
+    margin: 0 15px;
+}
+.home-pagination-item__link{
+    --height:30px;
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: #939393;
+    min-width: 40px;
+    height: var(--height);
+    display: block;
+    text-align: center;
+    line-height: var(--height);
+    border-radius: 2px;
+}
+.home-pagination-item-active .home-pagination-item__link{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+.home-pagination-item-active .home-pagination-item__link:hover{
+    background-color: rgb(219, 90, 64);
+}
+/*Animation*/
+@keyframes fadeIn{/*chuyển động*/
+    from{
+        opacity: 0;/*Độ xuất hiện*/
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes HeaderNotifyUp
+{
+    from {
+transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+@keyframes growth{
+    from{
+        transform: scale(var(--growth-from));
+    }
+    to{
+        transform: scale(var(--growth-to));
+    }
+}

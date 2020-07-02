@@ -1,0 +1,32 @@
+/* Responsive */
+
+/* Phần chung của mobile và tablet */
+@media screen and (max-width:63.9375em)
+{
+    .header__navbar{
+        display: none;
+    }
+    .nav_bars{
+        display: block;
+    }
+    .navbar_header-mobile{
+        display: block;  
+    }
+}
+/* mobile width < 740px */
+@media screen and (max-width:739px){
+    .category{
+        display: none;
+    }
+    .grid__column-2-4column{
+        width: 50%;
+        flex-direction: column;
+    }
+}
+/* tablet width >=740px and width < 1024px */
+@media screen and (min-width:46.25em) and (max-width:63.9375em){
+    .grid__column-2-4column{
+        width: 33.333%;
+        flex-direction: column;
+    }
+}
